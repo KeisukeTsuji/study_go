@@ -1,16 +1,32 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os/user"
+	"time"
+)
 
 func init() {
-	fmt.Printf("最初に呼ばれる\n")
+	fmt.Println("最初に呼ばれる")
 }
 
 func hoge() {
-	fmt.Printf("hoge!\n")
+	fmt.Println("hoge!")
+}
+
+func printlnTimeNow() {
+	// https://pkg.go.dev/time@go1.16.6#Now
+	fmt.Println(time.Now())
+}
+
+func printlnUserCurrent() {
+	// https://pkg.go.dev/os/user@go1.16.6#Current
+	fmt.Println(user.Current())
 }
 
 func main() {
 	hoge()
-	fmt.Printf("Hello world\n")
+	printlnTimeNow()
+	printlnUserCurrent()
+	fmt.Println("Hello world")
 }
