@@ -13,4 +13,8 @@ func main() {
 
 	// 型で配列のlengthが決まっているので追加するとエラーになる。sliceなら可能。
 	// b.append(300)
+
+	n := []int{1, 2, 3, 4, 5, 6}
+	n = append(n, 100)
+	fmt.Println(n)
 }
